@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* GLOBAL STYLES */
+
+body {
+  background-color: #fdf5e6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(125,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%2355CAFF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(193,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23F00'/%3E%3Cstop offset='1' stop-color='%23FC0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='3.3'%3E%3Cpath transform='translate(-46.9 6.8) rotate(3.2 1409 581) scale(1.002496)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='1.1' transform='translate(-41.5 31) rotate(5.800000000000001 800 450) scale(1.008964)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(16.700000000000003 -61.5) rotate(54.5 401 736) scale(1.008964)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='1'%3E%3Cpath transform='translate(186 -5.3999999999999995) rotate(1.3499999999999999 150 345) scale(0.9828319999999999)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='2.2' transform='translate(-85.5 -81) rotate(61.2 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-146.8 45.2) rotate(10.2 1400 132) scale(0.965)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  border: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 14px;
+}
+
+li {
+  font-size: 14px;
+}
+
+/* MAIN CARD - All styles relating to the main card/container */
+
+.main-card {
+  max-width: 90%;
+  margin: auto;
+}
+
+/* TOP SIDE - All styles relating to the top side of the card */
+.top-side {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-color: #fff;
+}
+.top-side > h2 {
+  margin-bottom: 20px;
+}
+.top-side p {
+  font-size: 14px;
+}
+.top-side > p {
+  font-weight: 600;
+  color: #2e8b57;
+}
+
+.top-side-text p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* BOTTOM SIDE - All styles relating to the bottom side of the card */
+/* .bottom-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
+
+/* LEFT BOTTOM STYLES */
+.left-bottom {
+  background-color: #8bc2e3;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+}
+.price::before {
+  content: "$29 ";
+  font-size: 30px;
+  font-weight: 600;
+}
+.price-tag {
+  margin-top: 20px;
+}
+input[type="button"] {
+  width: 100%;
+  margin-top: 15px;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #349e63;
+  border: none;
+  border-radius: 5px;
+}
+input[type="button"]:hover {
+  transform: scale(0.98);
+}
+input[value="Sign Up"] {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* RIGHT BOTTOM STYLES  */
+.right-bottom {
+  background-color: #9fcde8;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.right-bottom li {
+  line-height: 2;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 430px) {
+  .bottom-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .main-card {
+    max-width: 600px;
+    height: 600px;
+    margin: auto;
+  }
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .right-bottom li {
+    line-height: 1.5;
+  }
+  .top-side {
+    border-radius: 5px 5px 0 0;
+  }
+  .right-bottom {
+    border-radius: 0 0 5px 0;
+  }
+  .left-bottom {
+    border-radius: 0 0 0 5px;
+  }
+}
